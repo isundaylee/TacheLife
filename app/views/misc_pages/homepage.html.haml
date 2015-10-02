@@ -1,0 +1,30 @@
+.artboard#homepage_map
+  #google_map_content
+  #overlay
+    #location
+      %span#city Boston,
+      %span#state MA
+    .dot{style: 'left: 200px; top: 150px; '}
+    .dot{style: 'left: 700px; top: 100px; '}
+    .dot{style: 'left: 500px; top: 50px; '}
+    .dot{style: 'left: 400px; top: 300px; '}
+    .dot{style: 'left: 700px; top: 200px; '}
+    .dot{style: 'left: 700px; top: 550px; '}
+    .dot{style: 'left: 600px; top: 400px; '}
+    .dot{style: 'left: 900px; top: 600px; '}
+    .dot{style: 'left: 600px; top: 600px; '}
+    .large-dot#large_dot1{style: 'left: 200px; top: 600px; '}
+    .large-dot#large_dot2{style: 'left: 250px; top: 300px; '}
+    .large-dot#large_dot3{style: 'left: 800px; top: 300px; '}
+    .large-dot#large_dot4{style: 'left: 900px; top: 500px; '}
+    = image_tag 'mock_shop_1.png', class: 'shop', style: 'left: 300px; top: 150px; '
+    = image_tag 'mock_shop_2.png', class: 'shop', style: 'left: 400px; top: 550px; '
+    = image_tag 'mock_shop_3.png', class: 'shop', style: 'left: 100px; top: 500px; '
+    = image_tag 'mock_shop_4.png', class: 'shop', style: 'left: 750px; top: 450px; '
+.artboard#about_us
+  %div
+  %div
+  %div
+
+
+%script{async: true, defer: true, src: 'https://maps.googleapis.com/maps/api/js?key=' + ENV['GOOGLE_MAPS_API_KEY'] + '&callback=initHomepageMap'}
