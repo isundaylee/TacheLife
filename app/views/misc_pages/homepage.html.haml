@@ -1,4 +1,6 @@
-.artboard#homepage_map
+.artboard#tagline Explore the local goods around you.
+
+.artboard#map
   #google_map_content
   #overlay
     #location
@@ -21,10 +23,19 @@
     = image_tag 'mock_shop_2.png', class: 'shop', style: 'left: 400px; top: 550px; '
     = image_tag 'mock_shop_3.png', class: 'shop', style: 'left: 100px; top: 500px; '
     = image_tag 'mock_shop_4.png', class: 'shop', style: 'left: 750px; top: 450px; '
+.artboard#search_bar
+  = form_tag '/' do
+    = text_field_tag :q, '', {placeholder: 'Search…'}
+  %a.category{href: '#'} Kids
+  %a.category{href: '#'} Food
+  %a.category{href: '#'} Art & Design
+  %a.category{href: '#'} Vintage
+  %a.category{href: '#'} Home & Living
+  %a.category{href: '#'} Clothing Accessories
 .artboard#about_us
   %div
   %div
   %div
 
 
-%script{async: true, defer: true, src: 'https://maps.googleapis.com/maps/api/js?key=' + ENV['GOOGLE_MAPS_API_KEY'] + '&callback=initHomepageMap'}
+/ %script{async: true, defer: true, src: 'https://maps.googleapis.com/maps/api/js?key=' + ENV['GOOGLE_MAPS_API_KEY'] + '&callback=initHomepageMap'}

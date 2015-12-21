@@ -3,22 +3,19 @@
   %head
     %title TacheLife
     %link{rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200,600"}/
+    %link{rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200,600"}/
+    %script{src: "https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js"}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  %body
+  %body{id: "#{params[:controller]}_#{params[:action]}"}
     %header
       .artboard
         = image_tag 'logo.png', id: 'logo'
-        %p#tagline Explore the local goods around you
         .bubble
           = image_tag 'mock_avatar.jpg'
-          %p Jiahao
-        .bubble
-          = image_tag 'mock_cart.png'
-          %p Cart
-        .bubble
-          = image_tag 'mock_favourite.png'
-          %p Favourites
-        %a#seller_join{href: "#"} Become a seller
+        %a.nav-item Help
+        %a.nav-item Cart
+        %a.nav-item Sell
+        %a.nav-item Home
     = yield

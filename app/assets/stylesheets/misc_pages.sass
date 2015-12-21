@@ -2,56 +2,84 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#homepage_map
-  position: relative
 
-  #google_map_content, #overlay
-    width: 100%
-    height: 700px
+#misc_pages_homepage
+  #tagline
+    color: #F9BD54
+    font-weight: 400
+    font-size: 2.5em
+    text-align: center
+    margin: 60px auto 30px
 
-  #overlay
-    position: absolute
-    left: 0
-    top: 0
-    background-color: rgba(125, 137, 159, 0.6)
+  #map
+    position: relative
 
-    #location
+    #google_map_content, #overlay
+      width: 100%
+      height: 700px
+
+    #overlay
+      position: absolute
+      left: 0
+      top: 0
+      background-color: rgba(125, 137, 159, 0.6)
+
+      #location
+        float: right
+        padding: 1em 2em
+        text-align: right
+
+        #city, #state
+          font-weight: 600
+          font-size: 3em
+          color: #FFFFFF
+
+      .dot
+        width: 30px
+        height: 30px
+        border-radius: 15px
+        background-color: #59666F
+        position: absolute
+        border: 3px solid lighten(#59666F, 40%)
+
+      .large-dot
+        width: 40px
+        height: 40px
+        border-radius: 20px
+        background-color: #F2AD5F
+        position: absolute
+        border: 3px solid lighten(#F2AD5F, 20%)
+
+      .shop
+        width: 100px
+        height: 100px
+        border-radius: 50px
+        position: absolute
+        border: 5px solid #EEE
+
+  #search_bar
+    background-color: #F9BD54
+
+    form
+      float: left
+      input
+        font-size: 1.3em
+        border-radius: 0.7em
+        border: none
+        padding: 0.2em 0.5em
+        margin: 0.7em 0em 0.7em 2em
+
+    .category
       float: right
-      padding: 1em 2em
-      text-align: right
+      font-size: 1.3em
+      color: #FFFFFF
+      margin-top: 0.7em
+      margin-right: 1em
 
-      #city, #state
-        font-weight: 600
-        font-size: 3em
-        color: #FFFFFF
+  #about_us
+    margin-top: 20px
 
-    .dot
-      width: 30px
-      height: 30px
-      border-radius: 15px
-      background-color: #59666F
-      position: absolute
-      border: 3px solid lighten(#59666F, 40%)
-
-    .large-dot
-      width: 40px
-      height: 40px
-      border-radius: 20px
-      background-color: #F2AD5F
-      position: absolute
-      border: 3px solid lighten(#F2AD5F, 20%)
-
-    .shop
-      width: 100px
-      height: 100px
-      border-radius: 50px
-      position: absolute
-      border: 5px solid #EEE
-
-#about_us
-  margin-top: 20px
-
-  > div
-    @include span_columns(4 of 12)
-    height: 300px
-    background-color: #F3E9C1
+    > div
+      @include span_columns(4 of 12)
+      height: 300px
+      background-color: #F3E9C1
